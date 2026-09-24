@@ -1,153 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="Yu5wg3rG6DBudvi1vgZFgDna7RK5skk4KBALDVmUKxM" />
-    <meta name="baidu-site-verification" content="code-KUfUymRwCz" />
-    <title>zwh - 2026</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="./style.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/animate.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .fp-section, .fp-slide, .fp-tableCell {
-            -webkit-box-sizing: content-box !important;
-            -moz-box-sizing: content-box !important;
-            box-sizing: content-box !important;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="Yu5wg3rG6DBudvi1vgZFgDna7RK5skk4KBALDVmUKxM" />
+  <meta name="baidu-site-verification" content="code-KUfUymRwCz" />
+  <title>zwh - 2026</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- External Stylesheets -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600,700' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/animate.css">
+
+  <!-- Local Custom Stylesheet -->
+  <link rel="stylesheet" href="style-en.css">
 </head>
 <body>
-    <div class="nav-header">
-        <div class="nav-brand"></div>
-        <div class="header-links">
-            <ul>
-                <li data-menuanchor="fourthPage"><a href="#contact">Contact</a></li>
-                <li data-menuanchor="thirdPage"><a href="#projects">Projects</a></li>
-                <li data-menuanchor="secondPage"><a href="#about">About</a></li>
-            </ul>
-        </div>
+
+  <!-- Top Right Floating Hamburger Button -->
+  <button class="menu-trigger-btn" id="menuToggle" aria-label="Open Menu">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <!-- Overlay for drawer menu -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Off-Canvas Drawer Navigation Screen -->
+  <div class="nav-screen" id="navScreen">
+    <i class="fa fa-times" id="menuClose" aria-label="Close Menu"></i>
+    <div class="nav-container">
+      <div class="nav-links">
+        <ul id="myMenu">
+          <li data-menuanchor="aboutme"><a href="#aboutme">Home</a></li>
+          <li data-menuanchor="about"><a href="#about">About</a></li>
+          <li data-menuanchor="projects"><a href="#projects">Projects</a></li>
+          <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="fullpage">
+    
+    <!-- SECTION 1: Home / Hero Section -->
+    <div class="section aboutme-hero" data-anchor="aboutme">
+      <div class="opaque-bg animated fadeInDown">
+        <h1 class="hero-title">zwh<span class="hero-slash">/</span>123</h1>
+        <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
+      </div>
+      <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
     </div>
 
-    <div class="nav-screen">
-        <i class="fa fa-times fa-3x"></i>
-        <div class="nav-container">
-            <div class="nav-links">
-                <ul id='myMenu'>
-                    <li data-menuanchor="secondPage"><a href="#about">About</a></li>
-                    <li data-menuanchor="thirdPage"><a href="#projects">Projects</a></li>
-                    <li data-menuanchor="fourthPage"><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+    <!-- SECTION 2: About Me Section -->
+    <div class="section" data-anchor="about">
+      <div class="about-section-container">
+        <div class="about-main-title">
+          <h1 class="wow fadeInDown" data-wow-delay="0.1s">About Me</h1>
         </div>
+
+        <div class="about-layout-grid">
+          
+          <div class="about-left-column wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="avatar-wrapper">
+              <img src="https://placehold.co/200x200/337ab7/ffffff?text=ZWH" alt="zwh Avatar" class="about-avatar" onerror="this.src='https://placehold.co/200x200/337ab7/ffffff?text=Avatar'">
+              <div class="avatar-meta">
+                <h3>zwh</h3>
+                <p>Student &amp; Developer</p>
+              </div>
+            </div>
+
+            <div class="container-skillbar">
+              <div class="skillbar clearfix" data-percent="40%">
+                <div class="skillbar-title"><span>CAD</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent">40%</div>
+              </div>
+              <div class="skillbar clearfix" data-percent="20%">
+                <div class="skillbar-title"><span>PYTHON</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent">20%</div>
+              </div>
+              <div class="skillbar clearfix" data-percent="15%">
+                <div class="skillbar-title"><span>C LANG</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent">15%</div>
+              </div>
+              <div class="skillbar clearfix" data-percent="30%">
+                <div class="skillbar-title"><span>HTML</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent">30%</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-right-column wow fadeInRight" data-wow-delay="0.2s">
+            <h2>Hello, I'm a Student and Tech Enthusiast</h2>
+            <p>
+              Passionate about exploring computer science, software development, and embedded systems. I maintain a strong curiosity for new tech stacks and enjoy turning ideas into functional code and real-world projects.
+            </p>
+            <p>
+              Currently, my learning focuses on low-level programming fundamentals (C), automated processing &amp; script development (Python), web front-end design (HTML/CSS), and computer-aided design (CAD). I am also actively exploring new possibilities in embedded software development.
+            </p>
+
+            <div class="bio-highlight-box">
+              <ul>
+                <li><i class="fa fa-code"></i> <b>Focus Area:</b> Embedded scripting, web front-end development, and lightweight automation tools.</li>
+                <li><i class="fa fa-wrench"></i> <b>Practical Work:</b> System assembly based on LuatOS &amp; maintaining a personal tech blog.</li>
+                <li><i class="fa fa-bullhorn"></i> <b>Personal Motto:</b> Continuously accumulate hands-on experience and solve real problems with clean code.</li>
+              </ul>
+            </div>
+
+            <p>
+              Whether logic coding or hardware-software debugging, I enjoy overcoming challenges and delivering results. Feel free to check my latest work on the Projects page or get in touch via email!
+            </p>
+          </div>
+
+        </div>
+      </div>
     </div>
 
-    <div id="fullpage">
-        <!-- Section 1: About Me -->
-        <div class="section aboutme" data-anchor="aboutme">
-            <div class="opaque-bg animated fadeInDown">
-                <h1 style="color:white">zwh<span style="color:#337ab7">/</span>123</h1>
-                <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
+    <!-- SECTION 3: Projects Section -->
+    <div class="section" data-anchor="projects">
+      <div class="content-slide">
+        
+        <div class="slide">
+          <div class="project-card wow fadeInDown" data-wow-delay="0.2s">
+            <h1>LuatOS Project</h1>
+            <p><strong>Multifunctional Embedded Application</strong></p>
+            <p>Lua language scripting and system tuning practices based on LuatOS</p>
+            <div class="project-status">Status: In Progress</div>
+            <div>
+              <a href="https://blog.zwh233.top/index.php/archives/28/" target="_blank" class="btn-project">Project Link</a>
             </div>
-            <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
+          </div>
         </div>
 
-        <!-- Section 2: Skills -->
-        <div class="section" data-anchor="skills">
-            <div class="content">
-                <h1 class="wow fadeInDown" data-wow-delay="0.2s" style="color:#337ab7">About Me</h1>
-                <p class="wow fadeInDown" data-wow-delay="0.2s">Hello, I am a student and programming enthusiast.</p>
-                <div class="wow fadeInUp container-skillbar" data-wow-delay="0.2s">
-                    <div class="skillbar clearfix" data-percent="40%">
-                        <div class="skillbar-title" style="background: #337ab7;"><span>CAD</span></div>
-                        <div class="skillbar-bar" style="background: #337ab7;"></div>
-                        <div class="skill-bar-percent">40%</div>
-                    </div>
-                    <div class="skillbar clearfix" data-percent="20%">
-                        <div class="skillbar-title" style="background: #337ab7;"><span>PYTHON</span></div>
-                        <div class="skillbar-bar" style="background: #337ab7;"></div>
-                        <div class="skill-bar-percent">20%</div>
-                    </div>
-                    <div class="skillbar clearfix" data-percent="15%">
-                        <div class="skillbar-title" style="background: #337ab7;"><span>C Language</span></div>
-                        <div class="skillbar-bar" style="background: #337ab7;"></div>
-                        <div class="skill-bar-percent">15%</div>
-                    </div>
-                    <div class="skillbar clearfix" data-percent="30%">
-                        <div class="skillbar-title" style="background: #337ab7;"><span>HTML</span></div>
-                        <div class="skillbar-bar" style="background: #337ab7;"></div>
-                        <div class="skill-bar-percent">30%</div>
-                    </div>
-                </div>
+        <div class="slide">
+          <div class="project-card">
+            <h1>Website</h1>
+            <p><strong>Personal Blog</strong></p>
+            <p>A personal tech blog built for documenting technical insights and daily thoughts</p>
+            <div class="project-status">Status: In Progress</div>
+            <div>
+              <a href="https://blog.zwh233.top" target="_blank" class="btn-project">Project Link</a>
             </div>
+          </div>
         </div>
 
-        <!-- Section 3: Projects -->
-        <div class="section" data-anchor="projects">
-            <div class="content-slide">
-                <div class="slide">
-                    <h1 class="wow fadeInDown" data-wow-delay="0.2s" style="color:#337ab7">Luatos Project</h1>
-                    <p class="wow fadeInDown" data-wow-delay="0.2s">Multifunctional</p><br>
-                    <p class="wow fadeInUp" data-wow-delay="0.2s">Lua scripting based on Luatos.</p>
-                    <p class="wow fadeInUp" data-wow-delay="0.2s"> Status: <span style="color:#337ab7">In Progress</span></p>
-                    <form>
-                        <button formaction="https://blog.zwh233.top/index.php/archives/28/" type="submit" id="submit" class="btn btn-lg wow fadeInUp" data-wow-delay="0.2s">Project Link</button>
-                    </form>
-                </div>
-                <div class="slide">
-                    <h1 style="color:#337ab7">Website</h1>
-                    <p>Personal Blog</p><br>
-                    <p>A standard blog site.</p>
-                    <p>Status: <span style="color:#337ab7">In Progress</span></p>
-                    <form>
-                        <button formaction="https://blog.zwh233.top" type="submit" id="submit" class="btn btn-lg">Project Link</button>
-                    </form>
-                </div>
-                <div class="slide">
-                    <h1 style="color:#337ab7">Chatbot</h1>
-                    <p>Multifunctional bot project</p><br>
-                    <p>A very useful project for WeChat users.</p>
-                    <p> Status: <span style="color:#337ab7">Pending</span></p>
-                </div>
-                <div class="slide">
-                    <h1 style="color:#337ab7">Coming Soon</h1>
-                    <p>N/A</p><br>
-                    <p>Status: <span style="color:#337ab7">Coming Soon</span></p>
-                </div>
-            </div>
+        <div class="slide">
+          <div class="project-card">
+            <h1>Chatbot</h1>
+            <p><strong>Multifunctional Bot Project</strong></p>
+            <p>A useful automation assistant tool tailored for WeChat users</p>
+            <div class="project-status">Status: TBD</div>
+          </div>
         </div>
 
-        <!-- Section 4: Contact -->
-        <div class="section" data-anchor="contact">
-            <div class="content wow fadeInDown" data-wow-delay="0.2s">
-                <h1 style="color:#337ab7">Contact</h1><br>
-                <p>Whether you are interested in collaborating with me or just want to say hi, I'd love to hear from you!</p>
-                <p>Email: <a href="mailto:zwh@zwh233.top">zwh@zwh233.top</a> </p>
-                <a href="https://home.zwh233.top/donation.jpg">Donate</a>
-                <div class="social-links">
-                    <br>
-                    <div class="wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="https://www.zwh233.top">My Links</a>
-                        <br><br>
-                        <span><a href="https://home.zwh233.top/wechat.jpg"><i class="fa fa-wechat fa-2x"></i></a></span>
-                        <span><a href="https://qm.qq.com/cgi-bin/qm/qr?k=5VPdgyqhYsaQPRO8A8YdvKd2AaXwHll_&noverify=0"><i class="fa fa-qq fa-2x"></i></a></span>
-                        <span><a href="https://www.facebook.com/profile.php?id=100078178598195"><i class="fa fa-facebook fa-2x"></i></a></span>
-                        <span><a href="https://twitter.com/yanlongbsl?s=09"><i class="fa fa-twitter fa-2x"></i></a></span>
-                    </div>
-                </div>
-            </div>
+        <div class="slide">
+          <div class="project-card">
+            <h1>Coming Soon</h1>
+            <p><strong>N/A</strong></p>
+            <p>Brand-new and exciting projects are currently in preparation</p>
+            <div class="project-status">Status: Coming Soon</div>
+          </div>
         </div>
+
+      </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/wow.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
-    <script src="./script.js"></script>
+    <!-- SECTION 4: Contact Section -->
+    <div class="section" data-anchor="contact">
+      <div class="content-slide wow fadeInDown" data-wow-delay="0.2s">
+        <div class="contact-card">
+          <h1>Get in Touch</h1>
+          <p>Whether you're interested in collaborating or just want to say hello, I'd love to hear from you!</p>
+          <p class="contact-email">
+            <strong>Email:</strong> <a href="mailto:zwh@zwh233.top">zwh@zwh233.top</a>
+          </p>
+
+          <div class="donation-wrapper">
+            <a href="donation.jpg" class="donation-link" target="_blank">Donate / Support</a>
+          </div>
+
+          <div class="social-links-wrapper wow fadeInUp" data-wow-delay="0.3s">
+            <div class="social-links">
+              <!-- 1. GitHub -->
+              <a href="https://github.com/zwh-offical" class="social-icon-btn" title="GitHub" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+              <!-- 2. X (Twitter) -->
+              <a href="https://x.com/Mikan496" class="social-icon-btn" title="X (Twitter)" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <!-- 3. Facebook -->
+              <a href="https://www.facebook.com/share/1MouFRUBSK/" class="social-icon-btn" title="Facebook" target="_blank">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <!-- 4. YouTube -->
+              <a href="https://youtube.com/@zwh_official" class="social-icon-btn" title="YouTube" target="_blank">
+                <i class="fa fa-youtube-play"></i>
+              </a>
+              <!-- 5. Instagram -->
+              <a href="https://www.instagram.com/mikan071003" class="social-icon-btn" title="Instagram" target="_blank">
+                <i class="fa fa-instagram"></i>
+              </a>
+              <!-- 6. Telegram -->
+              <a href="https://t.me/Mikan496" class="social-icon-btn" title="Telegram" target="_blank">
+                <i class="fa fa-telegram"></i>
+              </a>
+              <!-- 7. WeChat -->
+              <a href="wechat.jpg" class="social-icon-btn" title="WeChat" target="_blank">
+                <i class="fa fa-wechat"></i>
+              </a>
+              <!-- 8. QQ -->
+              <a href="https://qm.qq.com/cgi-bin/qm/qr?k=5VPdgyqhYsaQPRO8A8YdvKd2AaXwHll_&noverify=0" class="social-icon-btn" title="QQ" target="_blank">
+                <i class="fa fa-qq"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- External JS Dependencies -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/wow.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+
+  <!-- Local Custom Script -->
+  <script src="script-en.js"></script>
 </body>
 </html>
