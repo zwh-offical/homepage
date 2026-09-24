@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,8 +14,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/animate.css">
-  
-  <!-- Custom Stylesheet -->
+
+  <!-- Local Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -48,7 +48,7 @@
     <!-- SECTION 1: Home / Hero Section -->
     <div class="section aboutme-hero" data-anchor="aboutme">
       <div class="opaque-bg animated fadeInDown">
-        <h1 style="color:white">zwh<span style="color:#337ab7">/</span>123</h1>
+        <h1 class="hero-title">zwh<span class="hero-slash">/</span>123</h1>
         <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
       </div>
       <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
@@ -84,7 +84,7 @@
                 <div class="skill-bar-percent">20%</div>
               </div>
               <div class="skillbar clearfix" data-percent="15%">
-                <div class="skillbar-title"><span>C LANG</span></div>
+                <div class="skillbar-title"><span>C</span></div>
                 <div class="skillbar-bar"></div>
                 <div class="skill-bar-percent">15%</div>
               </div>
@@ -96,32 +96,24 @@
             </div>
           </div>
 
-<div class="about-right-column wow fadeInRight" data-wow-delay="0.2s">
-            <h2>Hello, I am an Aerospace Engineering student and a programming enthusiast</h2>
+          <div class="about-right-column wow fadeInRight" data-wow-delay="0.2s">
+            <h2>Hello, I am an aerospace student and programming enthusiast</h2>
             <p>
-              Passionate about exploring computer science, software development, and embedded hardware fields.</p>
+              Passionate about exploring computer science, software development, and embedded hardware fields.
+            </p>
             <p>
-              Currently, my learning focus covers programming language fundamentals, Vibe Coding, the integration of computer science and aerospace, as well as Computer-Aided Design (CAD). I am also actively exploring new possibilities in embedded software development.
+              Currently, my learning focuses on programming fundamentals, Vibe Coding, aerospace and computing integration, and Computer-Aided Design (CAD). I am also actively exploring new possibilities in embedded software development.
             </p>
 
             <div class="bio-highlight-box">
               <ul>
-                <li><i class="fa fa-code"></i> <b>Development Focus:</b> Practical Software & IoT</li>
-                <li><i class="fa fa-bullhorn"></i> <b>Personal Motto:</b> Continuously accumulate practical experience and solve real-world problems with clean code.</li>
+                <li><i class="fa fa-code"></i> <b>Focus:</b> Practical Software &amp; IoT</li>
+                <li><i class="fa fa-bullhorn"></i> <b>Personal Philosophy:</b> Continuously accumulate practical experience and solve real problems with clean code.</li>
               </ul>
             </div>
 
             <p>
-              Whether it's writing software logic or debugging hardware-software interactions, I enjoy overcoming challenges and ultimately bringing features to life.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-            <p>
-              Whether logic coding or hardware-software debugging, I enjoy overcoming challenges and delivering results. Feel free to check my latest work on the Projects page or get in touch via email!
+              Whether writing software logic or debugging hardware alongside code, I enjoy the process of overcoming challenges and bringing features to life.
             </p>
           </div>
 
@@ -137,7 +129,7 @@
           <div class="project-card wow fadeInDown" data-wow-delay="0.2s">
             <h1>LuatOS Project</h1>
             <p><strong>Multifunctional Embedded Application</strong></p>
-            <p>Lua language scripting and system tuning practices based on LuatOS</p>
+            <p>Practice on Lua compilation and system tuning based on LuatOS</p>
             <div class="project-status">Status: In Progress</div>
             <div>
               <a href="https://blog.zwh233.top/index.php/archives/28/" target="_blank" class="btn-project">Project Link</a>
@@ -149,7 +141,7 @@
           <div class="project-card">
             <h1>Website</h1>
             <p><strong>Personal Blog</strong></p>
-            <p>A personal tech blog built for documenting technical insights and daily thoughts</p>
+            <p>A personal tech blog built to record technical insights and daily notes</p>
             <div class="project-status">Status: In Progress</div>
             <div>
               <a href="https://blog.zwh233.top" target="_blank" class="btn-project">Project Link</a>
@@ -161,7 +153,7 @@
           <div class="project-card">
             <h1>Chatbot</h1>
             <p><strong>Multifunctional Bot Project</strong></p>
-            <p>A useful automation assistant tool tailored for WeChat users</p>
+            <p>A useful automated assistant tool developed for WeChat users</p>
             <div class="project-status">Status: TBD</div>
           </div>
         </div>
@@ -170,7 +162,7 @@
           <div class="project-card">
             <h1>Coming Soon</h1>
             <p><strong>N/A</strong></p>
-            <p>Brand-new and exciting projects are currently in preparation</p>
+            <p>A brand new and interesting project is currently in preparation</p>
             <div class="project-status">Status: Coming Soon</div>
           </div>
         </div>
@@ -182,10 +174,10 @@
     <div class="section" data-anchor="contact">
       <div class="content-slide wow fadeInDown" data-wow-delay="0.2s">
         <div class="contact-card">
-          <h1>Get in Touch</h1>
-          <p>Whether you're interested in collaborating or just want to say hello, I'd love to hear from you!</p>
-          <p style="margin-top: 15px; margin-bottom: 5px;">
-            <strong>Email:</strong> <a href="mailto:zwh@zwh233.top" style="color:#337ab7;">zwh@zwh233.top</a>
+          <h1>Get In Touch</h1>
+          <p>Whether you are interested in collaborating with me or just want to say hi, I'd love to hear from you!</p>
+          <p class="contact-email">
+            <strong>Email:</strong> <a href="mailto:zwh@zwh233.top">zwh@zwh233.top</a>
           </p>
 
           <div class="donation-wrapper">
@@ -218,8 +210,8 @@
               <a href="https://t.me/Mikan496" class="social-icon-btn" title="Telegram" target="_blank">
                 <i class="fa fa-telegram"></i>
               </a>
-              <!-- 7. 微信 -->
-              <a href="wechat.jpg" class="social-icon-btn" title="微信" target="_blank">
+              <!-- 7. WeChat -->
+              <a href="wechat.jpg" class="social-icon-btn" title="WeChat" target="_blank">
                 <i class="fa fa-wechat"></i>
               </a>
               <!-- 8. QQ -->
@@ -241,7 +233,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
 
-  <!-- Custom Script -->
+  <!-- Local Custom Script -->
   <script src="script.js"></script>
 </body>
 </html>
