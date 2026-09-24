@@ -1,3 +1,11 @@
+// 语言检测与跳转逻辑（非中文跳转至英文版）
+(function() {
+  var userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  if (!userLang.startsWith('zh')) {
+    window.location.href = "https://home.zwh233.top/en/";
+  }
+})();
+
 $(document).ready(function() {
 
   // Typing animation plugin
@@ -15,7 +23,7 @@ $(document).ready(function() {
   })(jQuery);
 
   // Typing text trigger
-  $("#holder").writeText("Student + Junior Developer");
+  $("#holder").writeText("学生 + 初级开发者");
 
   // WOW.js initialization
   if (typeof WOW !== 'undefined') {
@@ -46,7 +54,7 @@ $(document).ready(function() {
     scrollBar: true,
     responsiveWidth: 500,
     navigation: true,
-    navigationTooltips: ['Home', 'About', 'Projects', 'Contact'],
+    navigationTooltips: ['首页', '关于', '项目', '接触'],
     anchors: ['aboutme', 'about', 'projects', 'contact'],
     menu: '#myMenu',
     fitToSection: false,
