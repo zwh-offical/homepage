@@ -158,14 +158,6 @@ p {
   margin-bottom: 10px;
 }
 
-.hero-title {
-  color: white;
-}
-
-.hero-slash {
-  color: #337ab7;
-}
-
 .aboutme-hero p {
   color: white;
   font-weight: 200;
@@ -463,15 +455,6 @@ p {
   max-width: 650px;
   margin: 0 auto;
   text-align: center;
-}
-
-.contact-email {
-  margin-top: 15px;
-  margin-bottom: 5px;
-}
-
-.contact-email a {
-  color: #337ab7;
 }
 
 .donation-wrapper {
