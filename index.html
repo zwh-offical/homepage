@@ -7,160 +7,232 @@
   <meta name="baidu-site-verification" content="code-KUfUymRwCz" />
   <title>zwh - 2026</title>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const TARGET_LANGUAGE = 'zh';
-      const REDIRECT_PATH = '/en/';
-      const userLanguages = navigator.languages && navigator.languages.length 
-                            ? navigator.languages 
-                            : [navigator.language || navigator.userLanguage];
-      const primaryLanguage = userLanguages[0].toLowerCase();
-      const isTargetLanguage = primaryLanguage.startsWith(TARGET_LANGUAGE);
-      if (!isTargetLanguage && !window.location.pathname.startsWith(REDIRECT_PATH)) {
-        window.location.replace(REDIRECT_PATH);
-      }
-    });
-  </script>
 
-  <link rel="stylesheet" href="./style.css">
-  <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
+  <!-- External Stylesheets -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600,700' rel='stylesheet' type='text/css'>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/animate.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .fp-section, .fp-slide, .fp-tableCell {
-        -webkit-box-sizing: content-box !important;
-        -moz-box-sizing: content-box !important;
-        box-sizing: content-box !important;
-    }
-  </style>
+
+  <!-- Local Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="nav-header">
-    <div class="nav-brand"></div>
-    <div class="header-links">
-      <ul>
-        <li data-menuanchor="fourthPage"><a href="#contact">接触</a></li>
-        <li data-menuanchor="thirdPage"><a href="#projects">项目</a></li>
-        <li data-menuanchor="secondPage"><a href="#about">关于</a></li>
-      </ul>
-    </div>
-  </div>
 
-  <div class="nav-screen">
-    <i class="fa fa-times fa-3x"></i>
+  <!-- Top Right Floating Hamburger Button -->
+  <button class="menu-trigger-btn" id="menuToggle" aria-label="打开菜单">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <!-- Overlay for drawer menu -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <!-- Off-Canvas Drawer Navigation Screen -->
+  <div class="nav-screen" id="navScreen">
+    <i class="fa fa-times" id="menuClose" aria-label="关闭菜单"></i>
     <div class="nav-container">
       <div class="nav-links">
-        <ul id='myMenu'>
-          <li data-menuanchor="secondPage"><a href="#about">关于</a></li>
-          <li data-menuanchor="thirdPage"><a href="#projects">项目</a></li>
-          <li data-menuanchor="fourthPage"><a href="#contact">接触</a></li>
+        <ul id="myMenu">
+          <li data-menuanchor="aboutme"><a href="#aboutme">首页</a></li>
+          <li data-menuanchor="about"><a href="#about">关于</a></li>
+          <li data-menuanchor="projects"><a href="#projects">项目</a></li>
+          <li data-menuanchor="contact"><a href="#contact">接触</a></li>
         </ul>
       </div>
     </div>
   </div>
 
   <div id="fullpage">
-    <div class="section aboutme" data-anchor="aboutme">
+    
+    <!-- SECTION 1: Home / Hero Section -->
+    <div class="section aboutme-hero" data-anchor="aboutme">
       <div class="opaque-bg animated fadeInDown">
-        <h1 style="color:white">zwh<span style="color:#337ab7">/</span>123</h1>
+        <h1 class="hero-title">zwh<span class="hero-slash">/</span>123</h1>
         <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
       </div>
       <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
     </div>
 
-    <div class="section" data-anchor="skills">
-      <div class="content">
-        <h1 class="wow fadeInDown" data-wow-delay="0.2s" style="color:#337ab7">关于我</h1>
-        <p class="wow fadeInDown" data-wow-delay="0.2s">你好，我是一个学生和编程爱好者</p>
-        <div class="wow fadeInUp container-skillbar" data-wow-delay="0.2s">
-          <div class="skillbar clearfix" data-percent="40%">
-            <div class="skillbar-title" style="background: #337ab7;"><span>CAD</span></div>
-            <div class="skillbar-bar" style="background: #337ab7;"></div>
-            <div class="skill-bar-percent">40%</div>
+    <!-- SECTION 2: About Me Section -->
+    <div class="section" data-anchor="about">
+      <div class="about-section-container">
+        <div class="about-main-title">
+          <h1 class="wow fadeInDown" data-wow-delay="0.1s">关于我</h1>
+        </div>
+
+        <div class="about-layout-grid">
+          
+          <div class="about-left-column wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="avatar-wrapper">
+              <img src="https://placehold.co/200x200/337ab7/ffffff?text=ZWH" alt="zwh Avatar" class="about-avatar" onerror="this.src='https://placehold.co/200x200/337ab7/ffffff?text=Avatar'">
+              <div class="avatar-meta">
+                <h3>zwh</h3>
+                <p>学生 &amp; 开发者</p>
+              </div>
+            </div>
+
+            <div class="container-skillbar">
+              <div class="skillbar clearfix" data-percent="40%">
+                <div class="skillbar-title"><span>CAD</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent">40%</div>
+              </div>
+              <div class="skillbar clearfix" data-percent="20%">
+                <div class="skillbar-title"><span>PYTHON</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent">20%</div>
+              </div>
+              <div class="skillbar clearfix" data-percent="15%">
+                <div class="skillbar-title"><span>C语言</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent">15%</div>
+              </div>
+              <div class="skillbar clearfix" data-percent="30%">
+                <div class="skillbar-title"><span>HTML</span></div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent">30%</div>
+              </div>
+            </div>
           </div>
-          <div class="skillbar clearfix" data-percent="20%">
-            <div class="skillbar-title" style="background: #337ab7;"><span>PYTHON</span></div>
-            <div class="skillbar-bar" style="background: #337ab7;"></div>
-            <div class="skill-bar-percent">20%</div>
+
+          <div class="about-right-column wow fadeInRight" data-wow-delay="0.2s">
+            <h2>你好，我是一个航空航天专业学生和编程爱好者</h2>
+            <p>
+              热衷于探索计算机科学、软件开发与硬件嵌入式领域。</p>
+            <p>
+              目前我的学习重点涵盖编程语言基础、Vibe Coding、计算机与航空航天融合以及计算机辅助设计（CAD）。同时也在积极探寻嵌入式软件开发的新可能。
+            </p>
+
+            <div class="bio-highlight-box">
+              <ul>
+                <li><i class="fa fa-code"></i> <b>开发方向：</b>实用软件与物联网</li>
+                <li><i class="fa fa-bullhorn"></i> <b>个人信念：</b> 持续积累实践经验，用简洁的代码解决真实问题。</li>
+              </ul>
+            </div>
+
+            <p>
+              无论是软件逻辑的编写还是硬件与代码的配合调试，我都享受克服困难并最终实现功能的过程。
+            </p>
           </div>
-          <div class="skillbar clearfix" data-percent="15%">
-            <div class="skillbar-title" style="background: #337ab7;"><span>C语言</span></div>
-            <div class="skillbar-bar" style="background: #337ab7;"></div>
-            <div class="skill-bar-percent">15%</div>
-          </div>
-          <div class="skillbar clearfix" data-percent="30%">
-            <div class="skillbar-title" style="background: #337ab7;"><span>HTML</span></div>
-            <div class="skillbar-bar" style="background: #337ab7;"></div>
-            <div class="skill-bar-percent">30%</div>
-          </div>
+
         </div>
       </div>
     </div>
 
+    <!-- SECTION 3: Projects Section -->
     <div class="section" data-anchor="projects">
       <div class="content-slide">
-        <div class="slide">
-          <h1 class="wow fadeInDown" data-wow-delay="0.2s" style="color:#337ab7">luatos项目</h1>
-          <p class="wow fadeInDown" data-wow-delay="0.2s">多功能</p><br>
-          <p class="wow fadeInUp" data-wow-delay="0.2s">基于luatos的lua语言编汇</p>
-          <p class="wow fadeInUp" data-wow-delay="0.2s"> 状态: <span style="color:#337ab7">正在进行</span></p>
-          <form>
-            <button formaction="https://blog.zwh233.top/index.php/archives/28/" type="submit" id="submit" class="btn btn-lg wow fadeInUp" data-wow-delay="0.2s">项目链接</button>
-          </form>
-        </div>
-        <div class="slide">
-          <h1 style="color:#337ab7">网站</h1>
-          <p>个人博客</p><br>
-          <p>建的普通的博客</p>
-          <p>状态: <span style="color:#337ab7">正在进行</span></p>
-          <form>
-            <button formaction="https://blog.zwh233.top" type="submit" id="submit" class="btn btn-lg">项目链接</button>
-          </form>
-        </div>
-        <div class="slide">
-          <h1 style="color:#337ab7">聊天机器人</h1>
-          <p>多功能机器人项目</p><br>
-          <p>一个对于微信用户非常有用的项目</p>
-          <p> 状态: <span style="color:#337ab7">待定</span></p>
-        </div>
-        <div class="slide">
-          <h1 style="color:#337ab7">马上就来</h1>
-          <p>N/A</p><br>
-          <p>状态: <span style="color:#337ab7">即将推出</span></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="section" data-anchor="contact">
-      <div class="content wow fadeInDown" data-wow-delay="0.2s">
-        <h1 style="color:#337ab7">接触</h1><br>
-        <p>无论您是否有兴趣与我合作还是只是想打个招呼，我都希望收到您的来信!</p>
-        <p>邮箱: <a href="mailto:zwh@zwh233.top">zwh@zwh233.top</a> </p>      
-        <a href="donation.jpg">点击捐赠</a>
         
-        <div class="social-links">
-          <br>
-          <div class="wow fadeInUp" data-wow-delay="0.5s">
-              <a href="https://www.zwh233.top">我的链接</a>
-              <br><br>
-              <span><a href="wechat.jpg"><i class="fa fa-wechat fa-2x"></i></a></span>
-              <span><a href="https://qm.qq.com/cgi-bin/qm/qr?k=5VPdgyqhYsaQPRO8A8YdvKd2AaXwHll_&noverify=0"><i class="fa fa-qq fa-2x"></i></a></span>
-              <span><a href="https://www.facebook.com/profile.php?id=100078178598195"><i class="fa fa-facebook fa-2x"></i></a></span>   
-              <span><a href="https://twitter.com/yanlongbsl?s=09"><i class="fa fa-twitter fa-2x"></i></a></span>       
+        <div class="slide">
+          <div class="project-card wow fadeInDown" data-wow-delay="0.2s">
+            <h1>luatos项目</h1>
+            <p><strong>多功能嵌入式应用</strong></p>
+            <p>基于 LuatOS 的 Lua 语言编汇与系统调优实践</p>
+            <div class="project-status">状态: 正在进行</div>
+            <div>
+              <a href="https://blog.zwh233.top/index.php/archives/28/" target="_blank" class="btn-project">项目链接</a>
+            </div>
           </div>
         </div>
+
+        <div class="slide">
+          <div class="project-card">
+            <h1>网站</h1>
+            <p><strong>个人博客</strong></p>
+            <p>搭建的普通个人技术博客，用于记录技术沉淀与日常随笔</p>
+            <div class="project-status">状态: 正在进行</div>
+            <div>
+              <a href="https://blog.zwh233.top" target="_blank" class="btn-project">项目链接</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="project-card">
+            <h1>聊天机器人</h1>
+            <p><strong>多功能机器人项目</strong></p>
+            <p>一个针对微信用户开发且非常有用的自动化辅助工具</p>
+            <div class="project-status">状态: 待定</div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="project-card">
+            <h1>马上就来</h1>
+            <p><strong>N/A</strong></p>
+            <p>全新有趣的项目正在筹备策划中</p>
+            <div class="project-status">状态: 即将推出</div>
+          </div>
+        </div>
+
       </div>
     </div>
+
+    <!-- SECTION 4: Contact Section -->
+    <div class="section" data-anchor="contact">
+      <div class="content-slide wow fadeInDown" data-wow-delay="0.2s">
+        <div class="contact-card">
+          <h1>接触交流</h1>
+          <p>无论您是否有兴趣与我合作还是只是想打个招呼，我都希望收到您的来信!</p>
+          <p class="contact-email">
+            <strong>邮箱:</strong> <a href="mailto:zwh@zwh233.top">zwh@zwh233.top</a>
+          </p>
+
+          <div class="donation-wrapper">
+            <a href="donation.jpg" class="donation-link" target="_blank">捐赠支持</a>
+          </div>
+
+          <div class="social-links-wrapper wow fadeInUp" data-wow-delay="0.3s">
+            <div class="social-links">
+              <!-- 1. GitHub -->
+              <a href="https://github.com/zwh-offical" class="social-icon-btn" title="GitHub" target="_blank">
+                <i class="fa fa-github"></i>
+              </a>
+              <!-- 2. X (Twitter) -->
+              <a href="https://x.com/Mikan496" class="social-icon-btn" title="X (Twitter)" target="_blank">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <!-- 3. Facebook -->
+              <a href="https://www.facebook.com/share/1MouFRUBSK/" class="social-icon-btn" title="Facebook" target="_blank">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <!-- 4. YouTube -->
+              <a href="https://youtube.com/@zwh_official" class="social-icon-btn" title="YouTube" target="_blank">
+                <i class="fa fa-youtube-play"></i>
+              </a>
+              <!-- 5. Instagram -->
+              <a href="https://www.instagram.com/mikan071003" class="social-icon-btn" title="Instagram" target="_blank">
+                <i class="fa fa-instagram"></i>
+              </a>
+              <!-- 6. Telegram -->
+              <a href="https://t.me/Mikan496" class="social-icon-btn" title="Telegram" target="_blank">
+                <i class="fa fa-telegram"></i>
+              </a>
+              <!-- 7. 微信 -->
+              <a href="wechat.jpg" class="social-icon-btn" title="微信" target="_blank">
+                <i class="fa fa-wechat"></i>
+              </a>
+              <!-- 8. QQ -->
+              <a href="https://qm.qq.com/cgi-bin/qm/qr?k=5VPdgyqhYsaQPRO8A8YdvKd2AaXwHll_&noverify=0" class="social-icon-btn" title="QQ" target="_blank">
+                <i class="fa fa-qq"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
   </div>
 
+  <!-- External JS Dependencies -->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://s3-us-west-2.amazonaws.com/parallax-theme/assets/wow.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
-  <script src="./script.js"></script>
+
+  <!-- Local Custom Script -->
+  <script src="script.js"></script>
 </body>
 </html>
